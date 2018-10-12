@@ -5,9 +5,10 @@ Once you have made your homework, you must submit it with a pull request. As a r
 ## GIT commands
 
 ### Install git
-Linux: sudo apt-get install git
-Mac: Brew install git
-Win: https://git-scm.com/download/win
+*Linux*: `sudo apt-get install git`   
+*Mac*: `Brew install git`  
+*Win*: [Download](https://git-scm.com/download/win)
+
 
 ### Configure name & mail
 Git config --global user.email “you@hyf.com”
