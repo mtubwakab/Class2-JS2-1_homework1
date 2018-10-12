@@ -1,42 +1,42 @@
 # Class2-JS2-1_homework1
-##### Homework exercise for the first week of the second javascript module
+#### Homework exercise for the first week of the second javascript module
 Once you have made your homework, you must submit it with a pull request. As a reminder you can follow the following flow of GIT commands to create a pull request:
 
-### GIT commands
+## GIT commands
 
-#### Install git
+### Install git
 Linux: sudo apt-get install git
 Mac: Brew install git
 Win: https://git-scm.com/download/win
 
-####Configure name & mail
+### Configure name & mail
 Git config --global user.email “you@hyf.com”
 Git config --global user.name “you”
 
-#### Clone repo
+### Clone repo
 Clone repo: https is easiest, ssh is best
 https://help.github.com/articles/connecting-to-github-with-ssh/
 
-##### HTTPS
+#### HTTPS
 `Git clone
 https://github.com/HackYourFutureBEHomework/Class2-JS2-1_homework1.git`
-##### SSH
+#### SSH
 `git@github.com:HackYourFutureBEHomework/Class2-JS2-1_homework1.git`
 
 ### Create branch
 git checkout -b branch-name
 
 
-#### Add file
+### Add file
 Git add file.html
 
-#### Check status
+### Check status
 Git status
 
-#### Commit
+### Commit
 Git commit -m “added file”
 
-#### Push
+### Push
 Git push
 
 Create pull request on GitHub
