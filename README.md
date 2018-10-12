@@ -24,21 +24,20 @@ https://github.com/HackYourFutureBEHomework/Class2-JS2-1_homework1.git`
 `git@github.com:HackYourFutureBEHomework/Class2-JS2-1_homework1.git`
 
 ### Create branch
-git checkout -b branch-name
-
+`git checkout -b #branch-name#`
 
 ### Add file
-Git add file.html
+`git add index.html`
 
 ### Check status
-Git status
+`git status`
 
 ### Commit
-Git commit -m “added file”
+`git commit -m “added file”`
 
 ### Push
-Git push
+`git push`
 
-Create pull request on GitHub
+### Create pull request on GitHub
 
 
