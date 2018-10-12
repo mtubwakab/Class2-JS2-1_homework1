@@ -17,9 +17,11 @@ Git config --global user.name “you”
 Clone repo: https is easiest, ssh is best
 https://help.github.com/articles/connecting-to-github-with-ssh/
 
-HTTPS: `Git clone
+##### HTTPS
+`Git clone
 https://github.com/HackYourFutureBEHomework/Class2-JS2-1_homework1.git`
-SSH: `git@github.com:HackYourFutureBEHomework/Class2-JS2-1_homework1.git`
+##### SSH
+`git@github.com:HackYourFutureBEHomework/Class2-JS2-1_homework1.git`
 
 ### Create branch
 git checkout -b branch-name
