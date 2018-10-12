@@ -22,7 +22,7 @@ Checkout [Connecting to Github with SSH](https://help.github.com/articles/connec
 **HTTPS:** `git clone
 https://github.com/HackYourFutureBEHomework/Class2-JS2-1_homework1.git`   
 **SSH:**
-`git@github.com:HackYourFutureBEHomework/Class2-JS2-1_homework1.git`
+`git clone git@github.com:HackYourFutureBEHomework/Class2-JS2-1_homework1.git`
 
 ### Create branch
 `git checkout -b #branch-name#`
@@ -40,5 +40,9 @@ https://github.com/HackYourFutureBEHomework/Class2-JS2-1_homework1.git`
 `git push`
 
 ### Create pull request on GitHub
+Checkout the [Pull requests](https://github.com/HackYourFutureBEHomework/Class2-JS2-1_homework1/pulls) of this homework repo where you can create a new pull request.
 
+<br><br>
+
+ _Good luck!_
 
