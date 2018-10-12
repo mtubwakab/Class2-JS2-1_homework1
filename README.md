@@ -6,7 +6,7 @@ Once you have made your homework, you must submit it with a pull request. As a r
 
 ### Install git
 *Linux*: `sudo apt-get install git`   
-*Mac*: `Brew install git`  
+*Mac*: `brew install git`  
 *Win*: [Download](https://git-scm.com/download/win)
 
 
@@ -15,7 +15,8 @@ Once you have made your homework, you must submit it with a pull request. As a r
 `git config --global user.name “you”`
 
 ### Clone repo
-Clone repo: https is easiest, ssh is best! Checkout [Connecting to Github with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/) for a clear guide on how to connect with GIT through SSH.
+Clone repo: **_https is easiest, ssh is best_**!    
+Checkout [Connecting to Github with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/) for a clear guide on how to connect with GIT through SSH.
 
 
 **HTTPS:** `git clone
