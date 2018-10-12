@@ -11,17 +11,16 @@ Once you have made your homework, you must submit it with a pull request. As a r
 
 
 ### Configure name & mail
-Git config --global user.email “you@hyf.com”
-Git config --global user.name “you”
+`git config --global user.email “you@hyf.com”`   
+`git config --global user.name “you”`
 
 ### Clone repo
-Clone repo: https is easiest, ssh is best
-https://help.github.com/articles/connecting-to-github-with-ssh/
+Clone repo: https is easiest, ssh is best! Checkout [Connecting to Github with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/) for a clear guide on how to connect with GIT through SSH.
 
-#### HTTPS
-`Git clone
-https://github.com/HackYourFutureBEHomework/Class2-JS2-1_homework1.git`
-#### SSH
+
+**HTTPS:** `git clone
+https://github.com/HackYourFutureBEHomework/Class2-JS2-1_homework1.git`   
+**SSH:**
 `git@github.com:HackYourFutureBEHomework/Class2-JS2-1_homework1.git`
 
 ### Create branch
