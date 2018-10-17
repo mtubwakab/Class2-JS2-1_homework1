@@ -67,66 +67,45 @@
 
 <script>
 
-  function multiply() {
+  let num1;
+  let num2;
 
-    // Here we look inside our HTML document and get the element with ID 'number1'
-    // which is an input field, so we can get its value (what we have typed inside the input field)
-    num1 = document.getElementById('number1').value;
-
-    // We do the same for the second input field
+  function getNumbers(number1, number2) {
+    num1 = document.getElementById('number1').value; 
     num2 = document.getElementById('number2').value;
+  }
 
-    // HINT: console.log the values here to see if the above is working
-
-    // we multiply the two values
-    result = num1 * num2;
-
-    // We select the element where we want to write the result
-    var resultElement = document.getElementById('js-result');
-    // we write the result inside the HTML of the element
+  function setResult(result) { 
+    let resultElement = document.getElementById('js-result');
     resultElement.innerHTML = result;
+  }
+
+  function multiply() {
+    getNumbers(num1,num2);
+    result = num1 * num2;
+    setResult(result);
   }
 
   function divide() {
-    
-    num1 = document.getElementById('number1').value;
-    num2 = document.getElementById('number2').value;
-    
+    getNumbers(num1,num2);
     result = num1 / num2;
-    
-    var resultElement = document.getElementById('js-result');
-    resultElement.innerHTML = result;
+    setResult(result);
   }
 
   function add() {
-    
-    num1 = document.getElementById('number1').value;
-    num2 = document.getElementById('number2').value;
-    
-    result = (+num1) + (+num2); /* //My numbers where treated as strings. The solution I found online was to use the unary plus operator, 
-    but although it works, Im not sure is the best solution */
-    
-    var resultElement = document.getElementById('js-result');
-    resultElement.innerHTML = result;
-    console.log(result);
+    getNumbers(num1,num2);
+    result =  parseInt(num1) + parseInt(num2); 
+    setResult(result);
   }
 
   function subtract() {
-     
-    num1 = document.getElementById('number1').value;
-    num2 = document.getElementById('number2').value;
-    
+    getNumbers(num1,num2);
     result = num1 - num2;
-    
-    var resultElement = document.getElementById('js-result');
-    resultElement.innerHTML = result;
+    setResult(result);
   }
 
   function largest() {
-     
-    num1 = document.getElementById('number1').value;
-    num2 = document.getElementById('number2').value;
-    
+    getNumbers(num1,num2);
     if (num1 > num2) {
       result = num1;
     } else if (num1 < num2){ 
@@ -134,26 +113,25 @@
     } else {
       result ="Both numbers are equal"
     }
-    var resultElement = document.getElementById('js-result');
-    resultElement.innerHTML = result;
+    setResult(result);
   }
 
   function closestTo100() {
-
-    num1 = document.getElementById('number1').value;
-    num2 = document.getElementById('number2').value;
-    let num1Input = Math.abs(Math.abs(num1) - 100); 
-    let num2Input = Math.abs(Math.abs(num2) - 100);
+    getNumbers(num1,num2);
+    let num1Input = Math.abs(num1 - 100); 
+    let num2Input = Math.abs(num2 - 100); 
     
-    if (num1Input < num2Input) {
-      result = num1 + " " + "is closer to 100";
-    } else if (num2Input < num1Input) {
+    /*Im still using the Math.abs method here but only in the result of the calculation that gives the value to num1Input. That
+    way the calculation also works with negative numbers in the input */
+
+    if (num1Input > num2Input) {
       result = num2 + " " + "is closer to 100";
+    } else if (num1Input < num2Input) {
+      result = num1 + " " + "is closer to 100";
     } else {
-      result = "both numbers have the same distance to 100";
+      result = "Both numbers have the same distance to 100";
     }
-    var resultElement = document.getElementById('js-result');
-    resultElement.innerHTML = result;
+    setResult(result);
   }
 
 </script>
