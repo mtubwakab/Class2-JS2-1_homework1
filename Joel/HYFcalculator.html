@@ -66,28 +66,73 @@
 </body>
 
 <script>
-  function multiply() {
-    // Here we look inside our HTML document and get the element with ID 'number1'
-    // which is an input field, so we can get its value (what we have typed inside the input field)
-    num1 = document.getElementById('number1').value;
-    // We do the same for the second input field
-    num2 = document.getElementById('number2').value;
-    // HINT: console.log the values here to see if the above is working
-    // we multiply the two values
-    result = num1 * num2;
-    // We select the element where we want to write the result
-    var resultElement = document.getElementById('js-result');
-    // we write the result inside the HTML of the element
+
+ function getNumbers() {
+ return {
+    num1: document.getElementById('number1').value,
+    num2: document.getElementById('number2').value,
+  }
+}
+
+  function setResult(result) { 
+    let resultElement = document.getElementById('js-result');
     resultElement.innerHTML = result;
   }
+
+  function multiply() {
+    const numbers = getNumbers();
+    result = numbers.num1 * numbers.num2;
+    setResult(result);
+  }
+
   function divide() {
-    // write your code here
+    const numbers = getNumbers();
+    result = numbers.num1 / numbers.num2;
+    setResult(result);
   }
+
   function add() {
-    // ...
+    const numbers = getNumbers();
+    result =  parseInt(numbers.num1) + parseInt(numbers.num2); 
+    setResult(result);
   }
-  // OTHER FUNCTIONS COME HERE
-  // GOOD LUCK GUYS!
+
+  function subtract() {
+    const numbers = getNumbers();
+    result = numbers.num1 - numbers.num2;
+    setResult(result);
+  }
+
+  function largest() {
+    const numbers = getNumbers();
+    if (numbers.num1 > numbers.num2) {
+      result = numbers.num1;
+    } else if (numbers.num1 < numbers.num2){ 
+      result = numbers.num2;
+    } else {
+      result ="Both numbers are equal"
+    }
+    setResult(result);
+  }
+
+  function closestTo100() {
+    const numbers = getNumbers();
+    let num1Input = Math.abs(numbers.num1 - 100); 
+    let num2Input = Math.abs(numbers.num2 - 100); 
+    
+    /*Im still using the Math.abs method here but only in the result of the calculation that gives the value to num1Input. That
+    way the calculation also works with negative numbers in the input */
+
+    if (num1Input > num2Input) {
+      result = numbers.num2 + " " + "is closer to 100";
+    } else if (num1Input < num2Input) {
+      result = numbers.num1 + " " + "is closer to 100";
+    } else {
+      result = "Both numbers have the same distance to 100";
+    }
+    setResult(result);
+  }
+
 </script>
 
 </html>
