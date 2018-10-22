@@ -30,7 +30,6 @@
       <div class="form-group">
         <label for="number1">First number</label>
 
-        <!-- we define an element with an id so that we can access it from our javascript -->
         <input type="text" class="form-control" placeholder="Enter first number" id="number1">
 
       </div>
@@ -38,7 +37,6 @@
       <div class="form-group">
         <label for="number2">Second number</label>
 
-        <!-- we define another element with another id so that we can also access it from our javascript -->
         <input type="text" class="form-control" placeholder="Enter second number" id="number2">
 
       </div>
@@ -55,10 +53,6 @@
     <h2>Result:</h2>
 
     <h3 id="js-result">
-
-      <!-- WRITE THE RESULT HERE -->
-      <!-- hint: use innerHTML -->
-
     </h3>
 
   </div>
@@ -67,96 +61,64 @@
 
 <script>
 
-  function multiply() {
+  function getNumbers() {
+ return {
+    num1: document.getElementById('number1').value,
+    num2: document.getElementById('number2').value,
+  }
+}
 
-    // Here we look inside our HTML document and get the element with ID 'number1'
-    // which is an input field, so we can get its value (what we have typed inside the input field)
-    num1 = document.getElementById('number1').value;
-
-    // We do the same for the second input field
-    num2 = document.getElementById('number2').value;
-
-    // HINT: console.log the values here to see if the above is working
-
-    // we multiply the two values
-    result = num1 * num2;
-
-    // We select the element where we want to write the result
-    var resultElement = document.getElementById('js-result');
-    // we write the result inside the HTML of the element
+  function setResult(result) { 
+    let resultElement = document.getElementById('js-result');
     resultElement.innerHTML = result;
+  }
+
+  function multiply() {
+    var numbers = getNumbers();
+    result = numbers.num1 * numbers.num2;
+    setResult(result);
   }
 
   function divide() {
-    // write your code here
-    num1 = document.getElementById('number1').value;
-
-    num2 = document.getElementById('number2').value;
-
-    console.log(divide);
-
-    result = num1 / num2;
-    
-    var resultElement = document.getElementById('js-result');
-    resultElement.innerHTML = result;
+    var divide = getNumbers();
+    result = divide.num1 / divide.num2;
+    setResult(result);
   }
 
   function add() {
-    
-    num1 = document.getElementById('number1').value;
-
-    num2 = document.getElementById('number2').value;
-    
-    console.log(add);
-   
-    result = parseInt(num1) + parseInt(num2);
-    
-    var resultElement = document.getElementById('js-result');
-    resultElement.innerHTML = result;
+    var add = getNumbers();
+    result = parseInt(add.num1) + parseInt(add.num2);
+    setResult(result);
   }
 
   function subtract() {
-    // write your code here
-    num1 = document.getElementById('number1').value;
-
-    num2 = document.getElementById('number2').value;
-
-    console.log(subtract);
-
-    result = num1 - num2;
-    
-    var resultElement = document.getElementById('js-result');
-    resultElement.innerHTML = result;
+    var subtract = getNumbers();
+    result = subtract.num1 - subtract.num2;
+    setResult(result);
   }
 
   function largest() {
-    num1 = document.getElementById('number1').value;
-    num2 = document.getElementById('number2').value;
-
-   if (num1 > num2) {
-     result = num1;
-   } else if (num1 < num2){
-     result = num2;
+    var nummbers = getNumbers();
+   if (nummbers.num1 > nummbers.num2) {
+     result = nummbers.num1;
+   } else if (nummbers.num1 < nummbers.num2){
+     result = nummbers.num2;
    } else {
-     result ='Both numbers are equal'
+     result ='Numbers are equal'
    }
-   var resultElement = document.getElementById('js-result');
-   resultElement.innerHTML = result;
+   setResult(result);
  }
 
   function closestTo100() {
-   num1 = document.getElementById('number1').value;
-   num2 = document.getElementById('number2').value;
-
-   if (num1 > num2) {
-     result = num1 + "" + "is closer to 100";
-   } else if (num1 < num2) {
-     result = num2 + "" +"is closer to 100";
+   var closestTo100 = getNumbers(); 
+   if (closestTo100.num1 > closestTo100.num2) {
+     result = closestTo100.num1 + "" + "is closer to 100";
+   } else if (closestTo100.num1 < closestTo100.num2) {
+     result = closestTo100.num2 + "" +"is closer to 100";
    } else {
-     result = 'Both numbers have the same distance to 100';
+     result = 'Both numbers is closer to 100';
    }
-   resultElement = document.getElementById('js-result');
-   resultElement.innerHTML = result;
+   setResult(result); 
  }
 
 </script>
